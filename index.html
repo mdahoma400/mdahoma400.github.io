@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mdahoma Idrisse — Python Backend Developer</title>
+  <meta name="description" content="Backend Developer specializing in Python, Django, REST APIs, and AI-integrated systems." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Distinctive font pairing: Syne (display) + JetBrains Mono (code feel) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Go to top">
+        <span class="logo-bracket">[</span>MI<span class="logo-bracket">]</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Hire Me</a></li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#education" class="mobile-link">Education</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <header class="hero" id="hero" role="banner">
+    <!-- Animated grid background -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <!-- Glowing orbs -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Badge -->
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for Internship · 2026</span>
+      </div>
+
+      <!-- Name -->
+      <h1 class="hero-name">
+        <span class="hero-first">Mdahoma</span>
+        <span class="hero-last">Idrisse</span>
+      </h1>
+
+      <!-- Typing title -->
+      <p class="hero-title">
+        <span class="typing-prefix">// </span><span id="typing-target"></span><span class="cursor-blink">|</span>
+      </p>
+
+      <!-- Tagline -->
+      <p class="hero-tagline">Building scalable backend systems and AI-powered applications</p>
+
+      <!-- CTAs -->
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Projects Shipped</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">78%</span>
+          <span class="stat-label">MCA Score</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════ -->
+    <section class="section about" id="about" aria-label="About Me">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>01 · About</span>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Text -->
+          <div class="about-text reveal">
+            <h2 class="section-title">The Developer <br/><em>Behind the Code</em></h2>
+            <p class="about-para">
+              I'm a backend developer based in Bengaluru, India — specializing in Python and Django to build clean, scalable RESTful APIs and database-driven systems. Currently pursuing my MCA at Bangalore University, I'm diving deep into Machine Learning and AI-integrated architectures.
+            </p>
+            <p class="about-para">
+              My focus is the intersection of solid backend engineering and intelligent systems — prompt engineering, agentic AI, and LLM API integration. I'm seeking a 6-month internship with a forward-thinking engineering team building AI-driven products.
+            </p>
+
+            <!-- Highlight pills -->
+            <div class="about-pills">
+              <span class="pill pill-green">Backend Expertise</span>
+              <span class="pill pill-blue">AI/ML Enthusiast</span>
+              <span class="pill pill-orange">Open to Internship</span>
+            </div>
+
+            <!-- Languages -->
+            <div class="about-languages">
+              <span class="lang-label">Languages:</span>
+              <span class="lang-item">🇬🇧 English</span>
+              <span class="lang-item">🇫🇷 French</span>
+              <span class="lang-item">🇸🇦 Arabic (basic)</span>
+            </div>
+          </div>
+
+          <!-- Right: Terminal card -->
+          <div class="about-terminal reveal">
+            <div class="terminal-bar">
+              <span class="term-dot red"></span>
+              <span class="term-dot yellow"></span>
+              <span class="term-dot green"></span>
+              <span class="term-title">profile.py</span>
+            </div>
+            <pre class="terminal-code"><code><span class="kw">class</span> <span class="cls">Developer</span>:
+    name    = <span class="str">"Mdahoma Idrisse"</span>
+    role    = <span class="str">"Python Backend Dev"</span>
+    base    = <span class="str">"Bengaluru, India"</span>
+
+    stack = [
+        <span class="str">"Python"</span>, <span class="str">"Django"</span>,
+        <span class="str">"REST APIs"</span>, <span class="str">"PostgreSQL"</span>
+    ]
+
+    ai_focus = [
+        <span class="str">"Prompt Engineering"</span>,
+        <span class="str">"LLM API Integration"</span>,
+        <span class="str">"Agentic AI"</span>
+    ]
+
+    status = <span class="str">"🟢 Open to Internship"</span>
+
+    <span class="kw">def</span> <span class="fn">contact</span>(self):
+        <span class="kw">return</span> <span class="str">"idrissemdahoma23@gmail.com"</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SKILLS
+    ═══════════════════════════════════════ -->
+    <section class="section skills" id="skills" aria-label="Skills">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>02 · Skills</span>
+        </div>
+        <h2 class="section-title reveal">Technical <em>Arsenal</em></h2>
+
+        <div class="skills-grid">
+
+          <!-- Languages -->
+          <div class="skill-card reveal" data-delay="0">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Languages</h3>
+            <div class="skill-tags">
+              <span class="tag tag-primary">Python</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Java</span>
+              <span class="tag">SQL</span>
+            </div>
+            <div class="skill-bars">
+              <div class="bar-row"><span>Python</span><div class="bar"><div class="bar-fill" data-w="92"></div></div><span class="bar-pct">92%</span></div>
+              <div class="bar-row"><span>JavaScript</span><div class="bar"><div class="bar-fill" data-w="65"></div></div><span class="bar-pct">65%</span></div>
+              <div class="bar-row"><span>Java</span><div class="bar"><div class="bar-fill" data-w="60"></div></div><span class="bar-pct">60%</span></div>
+              <div class="bar-row"><span>SQL</span><div class="bar"><div class="bar-fill" data-w="78"></div></div><span class="bar-pct">78%</span></div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-card reveal" data-delay="80">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12H3l9-9 9 9h-2v7a1 1 0 01-1 1H6a1 1 0 01-1-1v-7z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Backend</h3>
+            <div class="skill-tags">
+              <span class="tag tag-primary">Django</span>
+              <span class="tag tag-primary">DRF</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Auth Systems</span>
+            </div>
+            <div class="skill-bars">
+              <div class="bar-row"><span>Django</span><div class="bar"><div class="bar-fill" data-w="88"></div></div><span class="bar-pct">88%</span></div>
+              <div class="bar-row"><span>Django REST</span><div class="bar"><div class="bar-fill" data-w="82"></div></div><span class="bar-pct">82%</span></div>
+              <div class="bar-row"><span>API Design</span><div class="bar"><div class="bar-fill" data-w="80"></div></div><span class="bar-pct">80%</span></div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-card reveal" data-delay="160">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M3 5v4c0 1.657 4.03 3 9 3s9-1.343 9-3V5" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M3 9v4c0 1.657 4.03 3 9 3s9-1.343 9-3V9" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M3 13v4c0 1.657 4.03 3 9 3s9-1.343 9-3v-4" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Databases</h3>
+            <div class="skill-tags">
+              <span class="tag tag-primary">PostgreSQL</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">SQLite</span>
+            </div>
+            <div class="skill-bars">
+              <div class="bar-row"><span>PostgreSQL</span><div class="bar"><div class="bar-fill" data-w="80"></div></div><span class="bar-pct">80%</span></div>
+              <div class="bar-row"><span>MySQL</span><div class="bar"><div class="bar-fill" data-w="75"></div></div><span class="bar-pct">75%</span></div>
+              <div class="bar-row"><span>SQLite</span><div class="bar"><div class="bar-fill" data-w="85"></div></div><span class="bar-pct">85%</span></div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card reveal" data-delay="240">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Tools</h3>
+            <div class="skill-tags">
+              <span class="tag tag-primary">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Postman</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">Railway</span>
+            </div>
+          </div>
+
+          <!-- AI/ML — wide card -->
+          <div class="skill-card skill-card-wide reveal" data-delay="320">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2a4 4 0 014 4v2a4 4 0 01-8 0V6a4 4 0 014-4z" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M12 14v8M8 18H4a2 2 0 01-2-2v-1a2 2 0 012-2h4M16 18h4a2 2 0 002-2v-1a2 2 0 00-2-2h-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">AI & Emerging Tech</h3>
+            <div class="skill-tags">
+              <span class="tag tag-ai">Machine Learning</span>
+              <span class="tag tag-ai">Prompt Engineering</span>
+              <span class="tag tag-ai">LLM API Integration</span>
+              <span class="tag tag-ai">Agentic AI</span>
+              <span class="tag tag-ai">AI Concepts</span>
+            </div>
+            <p class="skill-note">Actively expanding into AI-integrated development — building systems that combine solid backend architecture with intelligent, LLM-powered layers.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROJECTS
+    ═══════════════════════════════════════ -->
+    <section class="section projects" id="projects" aria-label="Projects">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>03 · Projects</span>
+        </div>
+        <h2 class="section-title reveal">Things I've <em>Built</em></h2>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: CRM -->
+          <article class="project-card reveal" data-delay="0">
+            <div class="project-header">
+              <div class="project-num">01</div>
+              <div class="project-links">
+                <a href="https://github.com/mdahoma400/django-crm" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="View Django CRM on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Django CRM<br/>Web Application</h3>
+            <p class="project-desc">
+              Full-stack CRM system with role-based authentication, session management, and CRUD operations. Features an interactive dashboard with real-time customer activity metrics — designed for future AI-driven analytics integration.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Django</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">Bootstrap</span>
+            </div>
+            <a href="https://github.com/mdahoma400/django-crm" target="_blank" rel="noopener noreferrer" class="project-btn">
+              View on GitHub
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 12L12 2M12 2H6M12 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Project 2: Task API -->
+          <article class="project-card reveal" data-delay="120">
+            <div class="project-header">
+              <div class="project-num">02</div>
+              <div class="project-links">
+                <a href="https://github.com/mdahoma400/task-api" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="View Task Manager API on GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Task Manager<br/>REST API</h3>
+            <p class="project-desc">
+              Production-grade RESTful API with token-based authentication, status filtering (pending/completed), and full Postman documentation. Architected with modular endpoints — ready for AI task-prioritization or NLP classification layers.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">DRF</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">Token Auth</span>
+              <span class="tech-badge">Railway</span>
+            </div>
+            <a href="https://github.com/mdahoma400/task-api" target="_blank" rel="noopener noreferrer" class="project-btn">
+              View on GitHub
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 12L12 2M12 2H6M12 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Project 3: Portfolio -->
+          <article class="project-card reveal" data-delay="240">
+            <div class="project-header">
+              <div class="project-num">03</div>
+              <div class="project-links">
+                <a href="https://mdahoma400.github.io" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="View Portfolio live site">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Portfolio<br/>Website</h3>
+            <p class="project-desc">
+              Responsive, mobile-first portfolio with smooth CSS animations, optimised performance, and accessibility across all devices. Demonstrates front-end capability alongside backend depth.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+            <a href="https://mdahoma400.github.io" target="_blank" rel="noopener noreferrer" class="project-btn">
+              View Live
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 12L12 2M12 2H6M12 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         EDUCATION + CERTIFICATIONS
+    ═══════════════════════════════════════ -->
+    <section class="section education" id="education" aria-label="Education and Certifications">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>04 · Education & Certs</span>
+        </div>
+        <h2 class="section-title reveal">Learning <em>Journey</em></h2>
+
+        <div class="edu-grid">
+
+          <!-- Education column -->
+          <div class="edu-col reveal">
+            <h3 class="edu-col-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 12v5c3.33 1.67 8.67 1.67 12 0v-5" stroke-linecap="round"/>
+              </svg>
+              Education
+            </h3>
+
+            <div class="edu-item">
+              <div class="edu-timeline-dot"></div>
+              <div class="edu-item-content">
+                <span class="edu-period">Dec 2024 – Present</span>
+                <h4 class="edu-degree">Master of Computer Applications (MCA)</h4>
+                <p class="edu-school">Bangalore University, Karnataka</p>
+                <span class="edu-score">Score: 78%</span>
+                <p class="edu-note">Coursework: Machine Learning · AI · Data Structures · Software Engineering</p>
+              </div>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-timeline-dot"></div>
+              <div class="edu-item-content">
+                <span class="edu-period">Sep 2021 – Apr 2024</span>
+                <h4 class="edu-degree">BSc Computer Science</h4>
+                <p class="edu-school">Bharathiar University, Tamil Nadu</p>
+                <span class="edu-score edu-score-gold">First Class with Distinction</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications column -->
+          <div class="certs-col reveal" data-delay="120">
+            <h3 class="edu-col-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Certifications
+            </h3>
+
+            <div class="cert-card">
+              <div class="cert-icon">🔐</div>
+              <div>
+                <h4 class="cert-name">Cyber Security & Privacy</h4>
+                <p class="cert-issuer">NPTEL, IIT Madras · Elite · Jul–Oct 2025</p>
+              </div>
+            </div>
+
+            <div class="cert-card">
+              <div class="cert-icon">📱</div>
+              <div>
+                <h4 class="cert-name">Android App Development</h4>
+                <p class="cert-issuer">Great Learning Academy · Jan 2026</p>
+              </div>
+            </div>
+
+            <div class="cert-card">
+              <div class="cert-icon">☕</div>
+              <div>
+                <h4 class="cert-name">Java Programming</h4>
+                <p class="cert-issuer">Great Learning Academy · Jan 2022</p>
+              </div>
+            </div>
+
+            <div class="cert-card">
+              <div class="cert-icon">🐍</div>
+              <div>
+                <h4 class="cert-name">Python Data Structures</h4>
+                <p class="cert-issuer">Great Learning Academy · Jan 2022</p>
+              </div>
+            </div>
+
+            <!-- Achievement -->
+            <div class="achievement">
+              <span class="achievement-icon">🏆</span>
+              <div>
+                <h4 class="achievement-title">2nd Place — Pick &amp; Speak Competition</h4>
+                <p class="achievement-note">National Youth Day 2025 · T. John College, Bengaluru</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════ -->
+    <section class="section contact" id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          <span>05 · Contact</span>
+        </div>
+        <h2 class="section-title reveal">Let's <em>Build Something</em></h2>
+
+        <div class="contact-grid">
+          <div class="contact-text reveal">
+            <p>I'm actively looking for a 6-month internship with teams building AI-powered or backend-heavy products. If that's you — let's talk.</p>
+            <a href="mailto:idrissemdahoma23@gmail.com" class="btn btn-primary btn-large">
+              Send an Email
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="contact-links reveal" data-delay="120">
+            <a href="mailto:idrissemdahoma23@gmail.com" class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round"/>
+                  <path d="M22 6l-10 7L2 6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">idrissemdahoma23@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/idrisse-mdahoma-813532195" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-item-label">LinkedIn</span>
+                <span class="contact-item-value">idrisse-mdahoma</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/mdahoma400" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-item-label">GitHub</span>
+                <span class="contact-item-value">mdahoma400</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <span class="footer-name">Mdahoma Idrisse</span>
+      <span class="footer-copy">© 2026 · Built with HTML5, CSS3 & Vanilla JS</span>
+      <div class="footer-links">
+        <a href="https://github.com/mdahoma400" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/idrisse-mdahoma-813532195" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <path d="M9 14V4M4 9l5-5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
