@@ -1,9 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
-   MDAHOMA IDRISSE — PORTFOLIO STYLESHEET
-   Theme: Futuristic Dark · Syne + JetBrains Mono + DM Sans
-   ═══════════════════════════════════════════════════════════ */
-
-/* ─── CSS Variables ──────────────────────────────────────── */
+/*  Variables  */
 :root {
   /* Colors */
   --bg:          #080c10;
@@ -49,7 +44,7 @@
   --nav-h:       68px;
 }
 
-/* ─── Reset & Base ───────────────────────────────────────── */
+/*  Reset & Base  */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -80,20 +75,20 @@ a {
 
 ul { list-style: none; }
 
-/* ─── Scrollbar ──────────────────────────────────────────── */
+/*  Scrollbar  */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
 
-/* ─── Container ──────────────────────────────────────────── */
+/*  Container  */
 .container {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ─── Section shared ─────────────────────────────────────── */
+/*  Section shared  */
 .section {
   padding: var(--section-gap) 0;
   position: relative;
@@ -133,7 +128,7 @@ ul { list-style: none; }
   color: var(--accent);
 }
 
-/* ─── Buttons ────────────────────────────────────────────── */
+/*  Buttons  */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -190,7 +185,7 @@ ul { list-style: none; }
   font-size: 15px;
 }
 
-/* ─── Reveal animation ───────────────────────────────────── */
+/*  Reveal animation  */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -202,9 +197,33 @@ ul { list-style: none; }
   transform: none;
 }
 
-/* ═══════════════════════════════════════════════════════════
-   NAVBAR
-   ═══════════════════════════════════════════════════════════ */
+/* NAVBAR  */
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* PERFECT SCALING */
+.nav-logo-img {
+  height: 62px;           
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+
+}
+
+/* hover = premium feel */
+.nav-logo:hover .nav-logo-img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(0,212,170,0.4));
+}
+
+
+
+
+
 .navbar {
   position: fixed;
   top: 0;
@@ -335,9 +354,7 @@ ul { list-style: none; }
 .mobile-link:last-child { border-bottom: none; }
 .mobile-link:hover { color: var(--accent); }
 
-/* ═══════════════════════════════════════════════════════════
-   HERO
-   ═══════════════════════════════════════════════════════════ */
+/*  HERO    */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -568,9 +585,9 @@ ul { list-style: none; }
   to   { opacity: 1; transform: none; }
 }
 
-/* ═══════════════════════════════════════════════════════════
-   ABOUT
-   ═══════════════════════════════════════════════════════════ */
+/* ABOUT */
+
+
 .about {
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
 }
@@ -675,9 +692,7 @@ ul { list-style: none; }
 .terminal-code .str { color: var(--accent); }
 .terminal-code .fn  { color: #82aaff; }
 
-/* ═══════════════════════════════════════════════════════════
-   SKILLS
-   ═══════════════════════════════════════════════════════════ */
+/* SKILLS */
 .skills {
   background: var(--bg-2);
 }
@@ -814,9 +829,8 @@ ul { list-style: none; }
   margin-top: 8px;
 }
 
-/* ═══════════════════════════════════════════════════════════
-   PROJECTS
-   ═══════════════════════════════════════════════════════════ */
+/*  PROJECTS*/
+
 .projects {
   background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
 }
@@ -850,6 +864,7 @@ ul { list-style: none; }
   background: linear-gradient(to top, rgba(0,212,170,0.04), transparent);
   opacity: 0;
   transition: opacity 0.4s;
+  pointer-events: none;
 }
 
 .project-card:hover {
@@ -938,6 +953,13 @@ ul { list-style: none; }
   transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
   align-self: flex-start;
   margin-top: auto;
+   position: relative;
+  z-index: 1;         
+}
+
+.project-link-icon {
+  position: relative;
+  z-index: 1;
 }
 
 .project-btn:hover {
@@ -947,9 +969,7 @@ ul { list-style: none; }
   transform: translateX(3px);
 }
 
-/* ═══════════════════════════════════════════════════════════
-   EDUCATION
-   ═══════════════════════════════════════════════════════════ */
+/*   EDUCATION    */
 .education {
   background: var(--bg-2);
 }
@@ -1109,9 +1129,7 @@ ul { list-style: none; }
   color: var(--text-3);
 }
 
-/* ═══════════════════════════════════════════════════════════
-   CONTACT
-   ═══════════════════════════════════════════════════════════ */
+/*  CONTACT   */
 .contact {
   background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
 }
@@ -1179,9 +1197,7 @@ ul { list-style: none; }
   color: var(--text);
 }
 
-/* ═══════════════════════════════════════════════════════════
-   FOOTER
-   ═══════════════════════════════════════════════════════════ */
+/*  FOOTER */
 .footer {
   border-top: 1px solid var(--border);
   padding: 28px 0;
@@ -1219,9 +1235,8 @@ ul { list-style: none; }
 
 .footer-links a:hover { color: var(--accent); }
 
-/* ═══════════════════════════════════════════════════════════
-   SCROLL TO TOP
-   ═══════════════════════════════════════════════════════════ */
+/*   SCROLL TO TOP   */
+
 .scroll-top {
   position: fixed;
   bottom: 32px;
@@ -1255,9 +1270,16 @@ ul { list-style: none; }
   border-color: rgba(0,212,170,0.3);
 }
 
-/* ═══════════════════════════════════════════════════════════
-   RESPONSIVE
-   ═══════════════════════════════════════════════════════════ */
+/*   RESPONSIVITY*/
+
+
+
+@media (max-width: 768px) {
+  .nav-logo-img {
+    height: 34px;
+  }
+}
+
 @media (max-width: 1024px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);

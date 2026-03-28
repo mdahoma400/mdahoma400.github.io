@@ -3,26 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mdahoma Idrisse — Python Backend Developer</title>
+  <title>Mdahoma Idrisse</title>
+  <link rel="icon" type="image/png" href="logo3.png" />
   <meta name="description" content="Backend Developer specializing in Python, Django, REST APIs, and AI-integrated systems." />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Distinctive font pairing: Syne (display) + JetBrains Mono (code feel) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════════ -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Go to top">
-        <span class="logo-bracket">[</span>MI<span class="logo-bracket">]</span>
+          <img src="logo3.png" alt="Idee Logo" class="nav-logo-img">
+
       </a>
 
-      <!-- Desktop links -->
+      <!-- Desktop  -->
       <ul class="nav-links" role="list">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -31,13 +30,12 @@
         <li><a href="#contact" class="nav-link nav-cta">Hire Me</a></li>
       </ul>
 
-      <!-- Mobile hamburger -->
       <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
 
-    <!-- Mobile drawer -->
+    <!-- Mobile  -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <ul role="list">
         <li><a href="#about" class="mobile-link">About</a></li>
@@ -49,38 +47,33 @@
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════ -->
+   
   <header class="hero" id="hero" role="banner">
-    <!-- Animated grid background -->
     <div class="hero-grid" aria-hidden="true"></div>
-    <!-- Glowing orbs -->
+ 
     <div class="orb orb-1" aria-hidden="true"></div>
     <div class="orb orb-2" aria-hidden="true"></div>
 
     <div class="hero-content">
-      <!-- Badge -->
       <div class="hero-badge">
         <span class="badge-dot"></span>
         <span>Available for Internship · 2026</span>
       </div>
 
-      <!-- Name -->
+   
       <h1 class="hero-name">
         <span class="hero-first">Mdahoma</span>
         <span class="hero-last">Idrisse</span>
       </h1>
 
-      <!-- Typing title -->
+      
       <p class="hero-title">
         <span class="typing-prefix">// </span><span id="typing-target"></span><span class="cursor-blink">|</span>
       </p>
 
-      <!-- Tagline -->
+      
       <p class="hero-tagline">Building scalable backend systems and AI-powered applications</p>
 
-      <!-- CTAs -->
       <div class="hero-ctas">
         <a href="#projects" class="btn btn-primary">
           <span>View Projects</span>
@@ -91,7 +84,6 @@
         <a href="#contact" class="btn btn-secondary">Contact Me</a>
       </div>
 
-      <!-- Quick stats -->
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-num">3+</span>
@@ -119,9 +111,7 @@
 
   <main>
 
-    <!-- ═══════════════════════════════════════
-         ABOUT
-    ═══════════════════════════════════════ -->
+    <!--  ABOUT -->
     <section class="section about" id="about" aria-label="About Me">
       <div class="container">
         <div class="section-label reveal">
@@ -189,9 +179,9 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         SKILLS
-    ═══════════════════════════════════════ -->
+    <!--  SKILLS -->
+
+
     <section class="section skills" id="skills" aria-label="Skills">
       <div class="container">
         <div class="section-label reveal">
@@ -225,6 +215,7 @@
           </div>
 
           <!-- Backend -->
+
           <div class="skill-card reveal" data-delay="80">
             <div class="skill-card-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -246,6 +237,7 @@
           </div>
 
           <!-- Databases -->
+
           <div class="skill-card reveal" data-delay="160">
             <div class="skill-card-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -269,6 +261,7 @@
           </div>
 
           <!-- Tools -->
+
           <div class="skill-card reveal" data-delay="240">
             <div class="skill-card-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -287,6 +280,7 @@
           </div>
 
           <!-- AI/ML — wide card -->
+
           <div class="skill-card skill-card-wide reveal" data-delay="320">
             <div class="skill-card-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -309,9 +303,10 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         PROJECTS
-    ═══════════════════════════════════════ -->
+
+    <!--  PROJECTS -->
+
+
     <section class="section projects" id="projects" aria-label="Projects">
       <div class="container">
         <div class="section-label reveal">
@@ -353,6 +348,8 @@
           </article>
 
           <!-- Project 2: Task API -->
+
+
           <article class="project-card reveal" data-delay="120">
             <div class="project-header">
               <div class="project-num">02</div>
@@ -383,6 +380,8 @@
           </article>
 
           <!-- Project 3: Portfolio -->
+
+
           <article class="project-card reveal" data-delay="240">
             <div class="project-header">
               <div class="project-num">03</div>
@@ -415,9 +414,9 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         EDUCATION + CERTIFICATIONS
-    ═══════════════════════════════════════ -->
+    <!-- EDUCATION + CERTIFICATIONS -->
+
+
     <section class="section education" id="education" aria-label="Education and Certifications">
       <div class="container">
         <div class="section-label reveal">
@@ -515,9 +514,8 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         CONTACT
-    ═══════════════════════════════════════ -->
+    <!-- CONTACT -->
+
     <section class="section contact" id="contact" aria-label="Contact">
       <div class="container">
         <div class="section-label reveal">
@@ -581,9 +579,8 @@
 
   </main>
 
-  <!-- ═══════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════ -->
+  <!--  FOOTER -->
+
   <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
       <span class="footer-name">Mdahoma Idrisse</span>

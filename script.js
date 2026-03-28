@@ -1,25 +1,17 @@
 /**
- * MDAHOMA IDRISSE — Portfolio JavaScript
- * Features:
- *  - Navbar scroll behavior
- *  - Mobile menu toggle
- *  - Typing animation (hero title)
- *  - Scroll-triggered reveal animations
- *  - Skill bar animations
- *  - Scroll-to-top button
- *  - Active nav link highlight
+ * Main UI interactions and animations
  */
 
 'use strict';
 
-/* ─── DOM References ─────────────────────────────────────── */
-const navbar      = document.getElementById('navbar');
-const hamburger   = document.getElementById('hamburger');
-const mobileMenu  = document.getElementById('mobile-menu');
+/* Elements */
+const navbar       = document.getElementById('navbar');
+const hamburger    = document.getElementById('hamburger');
+const mobileMenu   = document.getElementById('mobile-menu');
 const scrollTopBtn = document.getElementById('scroll-top');
 const typingTarget = document.getElementById('typing-target');
 
-/* ─── Navbar: scroll class ───────────────────────────────── */
+/* Navbar scroll effect */
 window.addEventListener('scroll', () => {
   if (window.scrollY > 20) {
     navbar.classList.add('scrolled');
@@ -27,7 +19,6 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('scrolled');
   }
 
-  // Show/hide scroll-to-top button
   if (window.scrollY > 400) {
     scrollTopBtn.classList.add('visible');
   } else {
@@ -37,7 +28,7 @@ window.addEventListener('scroll', () => {
   updateActiveNavLink();
 }, { passive: true });
 
-/* ─── Mobile menu toggle ─────────────────────────────────── */
+/* Mobile menu */
 hamburger.addEventListener('click', () => {
   const isOpen = hamburger.classList.toggle('open');
   mobileMenu.classList.toggle('open', isOpen);
@@ -45,7 +36,6 @@ hamburger.addEventListener('click', () => {
   mobileMenu.setAttribute('aria-hidden', String(!isOpen));
 });
 
-// Close mobile menu when a link is tapped
 document.querySelectorAll('.mobile-link').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -55,12 +45,12 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   });
 });
 
-/* ─── Scroll to top ──────────────────────────────────────── */
+/* Scroll to top */
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-/* ─── Typing animation ───────────────────────────────────── */
+/* Typing effect */
 const phrases = [
   'Python Backend Developer',
   'Django & REST API Specialist',
@@ -73,27 +63,20 @@ let charIndex     = 0;
 let isDeleting    = false;
 let typingTimeout = null;
 
-/**
- * Core typing tick — types forward then deletes,
- * cycling through `phrases`.
- */
 function typeTick() {
   const currentPhrase = phrases[phraseIndex];
 
   if (!isDeleting) {
-    // Type forward
     charIndex++;
     typingTarget.textContent = currentPhrase.slice(0, charIndex);
 
     if (charIndex === currentPhrase.length) {
-      // Pause at end before deleting
       isDeleting = true;
       typingTimeout = setTimeout(typeTick, 1800);
     } else {
       typingTimeout = setTimeout(typeTick, 60 + Math.random() * 30);
     }
   } else {
-    // Delete backward
     charIndex--;
     typingTarget.textContent = currentPhrase.slice(0, charIndex);
 
@@ -107,10 +90,9 @@ function typeTick() {
   }
 }
 
-// Start after a short delay for the hero entry animation to settle
 setTimeout(typeTick, 1200);
 
-/* ─── Scroll reveal (IntersectionObserver) ───────────────── */
+/* Reveal on scroll */
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
@@ -136,18 +118,14 @@ document.querySelectorAll('.reveal').forEach(el => {
   revealObserver.observe(el);
 });
 
-/* ─── Skill bar animations ───────────────────────────────── */
-/**
- * When a skill card becomes visible, animate its bars
- * by reading `data-w` (target width percentage).
- */
+/* Skill bars */
 const barObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.querySelectorAll('.bar-fill').forEach((fill, i) => {
           const targetWidth = fill.dataset.w || '0';
-          // Stagger each bar slightly
+
           setTimeout(() => {
             fill.style.width = targetWidth + '%';
           }, 200 + i * 100);
@@ -163,10 +141,10 @@ document.querySelectorAll('.skill-card').forEach(card => {
   barObserver.observe(card);
 });
 
-/* ─── Active nav link highlight ──────────────────────────── */
-const sections     = document.querySelectorAll('section[id], header[id]');
-const navLinks     = document.querySelectorAll('.nav-link');
-const mobileLinks  = document.querySelectorAll('.mobile-link');
+/* Active section highlight */
+const sections    = document.querySelectorAll('section[id], header[id]');
+const navLinks    = document.querySelectorAll('.nav-link');
+const mobileLinks = document.querySelectorAll('.mobile-link');
 
 function updateActiveNavLink() {
   let currentSection = '';
@@ -193,7 +171,7 @@ function updateActiveNavLink() {
   });
 }
 
-/* ─── Smooth anchor clicks (fallback for older browsers) ─── */
+/* Smooth scroll */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const targetId = this.getAttribute('href');
@@ -210,13 +188,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-/* ─── Subtle parallax on hero orbs ──────────────────────── */
+/* Mouse parallax */
 const orbs = document.querySelectorAll('.orb');
 
 window.addEventListener('mousemove', (e) => {
   const cx = window.innerWidth  / 2;
   const cy = window.innerHeight / 2;
-  const dx = (e.clientX - cx) / cx;  // -1 to 1
+  const dx = (e.clientX - cx) / cx;
   const dy = (e.clientY - cy) / cy;
 
   orbs.forEach((orb, i) => {
@@ -225,6 +203,5 @@ window.addEventListener('mousemove', (e) => {
   });
 }, { passive: true });
 
-/* ─── Initial page-load setup ────────────────────────────── */
-// Run once to catch any already-visible elements
+/* Init */
 updateActiveNavLink();
