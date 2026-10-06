@@ -1,0 +1,190 @@
+/* Tokens, reset, typography, shared elements */
+:root {
+  --dark-navy:     #020c1b;
+  --navy:          #0a192f;
+  --light-navy:    #112240;
+  --lightest-navy: #233554;
+  --navy-shadow:   rgba(2, 12, 27, 0.7);
+  --dark-slate:    #495670;
+  --slate:         #8892b0;
+  --light-slate:   #a8b2d1;
+  --lightest-slate:#ccd6f6;
+  --white:         #e6f1ff;
+  --green:         #64ffda;
+  --green-tint:    rgba(100, 255, 218, 0.1);
+  --header-bg:     rgba(10, 25, 47, 0.85);
+  --img-overlay:   var(--navy);
+  --img-tint:      #64ffda;
+  color-scheme: dark;
+
+  --font-sans: "Inter", -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+
+  --fz-xxs: 12px;
+  --fz-xs:  13px;
+  --fz-sm:  14px;
+  --fz-md:  16px;
+  --fz-lg:  18px;
+  --fz-xl:  20px;
+  --fz-xxl: 22px;
+  --fz-heading: 32px;
+
+  --radius: 4px;
+  --nav-height: 100px;
+  --nav-scroll-height: 70px;
+  --tab-height: 42px;
+  --tab-width: 120px;
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition: all 0.25s var(--easing);
+}
+
+/* Light theme: same variable names, so every component switches automatically */
+:root[data-theme="light"] {
+  --dark-navy:     #e2e8f0;
+  --navy:          #f5f7fa;
+  --light-navy:    #ffffff;
+  --lightest-navy: #d6dde8;
+  --navy-shadow:   rgba(15, 23, 42, 0.15);
+  --dark-slate:    #94a3b8;
+  --slate:         #4a5568;
+  --light-slate:   #334155;
+  --lightest-slate:#0a192f;
+  --white:         #0a192f;
+  --green:         #0d8f6f;
+  --green-tint:    rgba(13, 143, 111, 0.1);
+  --header-bg:     rgba(245, 247, 250, 0.85);
+  --img-overlay:   transparent;
+  --img-tint:      #b5f2e1;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-slate) var(--navy);
+}
+
+body {
+  min-width: 320px;
+  background: var(--navy);
+  color: var(--slate);
+  font-family: var(--font-sans);
+  font-size: var(--fz-xl);
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s var(--easing), color 0.25s var(--easing);
+}
+
+@media (max-width: 480px) { body { font-size: var(--fz-lg); } }
+
+/* Blur the page behind the open mobile menu */
+body.menu-open { overflow: hidden; }
+body.menu-open main,
+body.menu-open .footer,
+body.menu-open .side {
+  filter: blur(5px) brightness(0.7);
+  pointer-events: none;
+  user-select: none;
+}
+
+::selection { background: var(--lightest-navy); color: var(--lightest-slate); }
+
+h1, h2, h3 { color: var(--lightest-slate); font-weight: 600; line-height: 1.1; }
+
+p { margin-bottom: 15px; }
+
+ul, ol { list-style: none; }
+
+a { display: inline-block; color: inherit; text-decoration: none; transition: var(--transition); }
+
+:focus-visible { outline: 2px dashed var(--green); outline-offset: 3px; }
+
+img { display: block; max-width: 100%; height: auto; }
+
+button { font: inherit; cursor: pointer; }
+
+.icon { width: 20px; height: 20px; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  color: var(--green);
+  background: transparent;
+  border: 1px solid var(--green);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  line-height: 1;
+  transition: var(--transition);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 4px 4px 0 0 var(--green);
+  transform: translate(-5px, -5px);
+}
+
+.btn-sm { padding: 0.75rem 1rem; font-size: var(--fz-xs); }
+.btn-lg { padding: 1.25rem 1.75rem; font-size: var(--fz-sm); }
+
+/* ---------- "01. Heading ———" ---------- */
+.numbered-heading {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 10px 0 40px;
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  white-space: nowrap;
+}
+
+.numbered-heading::before {
+  position: relative;
+  bottom: 4px;
+  margin-right: 10px;
+  counter-increment: section;
+  content: "0" counter(section) ".";
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+  font-weight: 400;
+}
+
+.numbered-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background: var(--lightest-navy);
+}
+
+@media (max-width: 1080px) { .numbered-heading::after { width: 200px; } }
+@media (max-width: 768px)  { .numbered-heading::after { width: 100%; } }
+@media (max-width: 600px)  { .numbered-heading::after { margin-left: 10px; } }
+
+/* ---------- "▹" lists ---------- */
+.ticked li { position: relative; padding-left: 30px; margin-bottom: 10px; }
+.ticked li::before { content: "▹"; position: absolute; left: 0; color: var(--green); }
+
+/* ---------- Animations ---------- */
+@keyframes fadeup   { from { opacity: 0; transform: translateY(20px); } }
+@keyframes fadedown { from { opacity: 0; transform: translateY(-20px); } }
+@keyframes fadein   { from { opacity: 0; } }
+
+/* Scroll reveal (only when JS runs, so content never stays hidden) */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s var(--easing), transform 0.6s var(--easing);
+}
+.js .reveal.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
