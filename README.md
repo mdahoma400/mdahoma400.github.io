@@ -9,7 +9,7 @@ css/layout.css          header, mobile menu, side rails, page width, footer
 css/components.css      hero, about, tabs, featured projects, contact
 js/main.js              theme toggle, header hide/show, mobile menu, tabs, scroll reveal
 assets/logo3.png        favicon
-assets/photo.svg        About photo placeholder (replace with your photo)
+assets/portfoliophoto.jpg  About photo (600px copy of portfoliophoto.png)
 assets/resume.pdf       linked from the "Resume" button
 assets/projects/        project images
 ```
